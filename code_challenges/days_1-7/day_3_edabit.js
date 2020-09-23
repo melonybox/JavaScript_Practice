@@ -79,3 +79,74 @@ function newWord(str) {
 function yeah_nope(bool) {
 	return bool ? "yeah" : "nope"
 }
+
+function kineticEnergy(m, v) {
+	return Math.round((m*v**2)*.5)
+}
+
+function arrayToString(arr) {
+	return arr.join("")
+}
+
+function sayWhat(obj) {
+	return `${obj[1]} ${obj[2]} ${obj[3]} ${obj[2]}`
+}
+
+function checkSquareAndCube(arr) {
+	return Math.sqrt(arr[0]) === Math.cbrt(arr[1])
+}
+
+function firstLast(name) {
+	return name[0] + name[name.length-1]
+}
+
+function starNumber(n) {
+	return 6*n*(n-1)+1
+}
+
+function validStrNumber(n) {
+	return !isNaN(n)
+}
+
+function stutter(word) {
+	const repeatWord = word.slice(0,2) + "... "
+	return repeatWord.repeat(2) + word + "?"
+}
+
+// `${`${word.slice(0, 2)}... `.repeat(2)}${word}?`
+
+function emotify(str) {
+	const objList = {smile: ":D", grin: ":)", sad: ":(", mad: ":P"}
+	const emojiFace = str.split(" ")[2]
+	return `Make me ${objList[emojiFace]}`
+}
+
+function relationToLuke(name) {
+	const strPreName = "Luke, I am your "
+	switch(name) {
+		case "Darth Vader":
+			return strPreName + "father."
+		case "Leia":
+			return strPreName + "sister."
+		case "Han":
+			return strPreName + "brother in law."
+		case "R2D2":
+			return strPreName + "droid."
+	}
+}
+
+// const rels = {
+// 		"Darth Vader": "father",
+// 		"Leia": "sister",
+// 		"Han": "brother in law",
+// 		"R2D2": "droid"
+// 	}
+// 	return `Luke I am your ${rels[name]}.`
+// had this in mind but brain go blank
+
+function distanceHome(arr) {
+	const distanceWalked = arr.reduce((sum, x) => {
+		return sum + x
+	})
+	return Math.abs(distanceWalked)
+}
