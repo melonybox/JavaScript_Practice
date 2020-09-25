@@ -126,3 +126,32 @@ function mean(nums) {
 	sumNums = nums.reduce((sum, x) => sum + x)
 	return parseFloat((sumNums/nums.length).toFixed(1))
 }
+
+function word(s) {
+	const wordObj = {
+		"one": 1,
+		"two": 2,
+		"three": 3,
+		"four": 4,
+		"five": 5,
+		"six": 6,
+		"seven": 7,
+		"eight": 8,
+		"nine": 9,
+		"zero": 0
+	}
+	return wordObj[s]
+}
+
+function integerBoolean(n) {
+	return n.split("").map(x => !!parseInt(x))
+}
+
+function countCharacters(arr) {
+	if (arr.length === 0) {
+		return 0
+	}
+	return arr.map(x => x.length).reduce((sum, x) => sum += x)
+}
+
+// return r.join('').length
