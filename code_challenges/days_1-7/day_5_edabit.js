@@ -35,3 +35,5 @@ function frontThree(str) {
 	}
 	return str.repeat(3)
 }
+
+//return str.slice(0,3).repeat(3)
