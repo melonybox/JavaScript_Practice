@@ -25,3 +25,22 @@ function weightAllowed(car, p, maxWeight) {
 }
 
 //const weightAllowed = (car, p, maxWeight) => (p.reduce((a, c) => a + c, 0) + car) * 0.453592 < maxWeight;
+
+//const coinsCombinations = (m, c) => m == 0 ? 1 : c.filter(e=> e <= m).reduce((s,n,i,a)=> s + coinsCombinations(m-a[i], a.slice(i)),0);
+
+function incrementItems(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		arr[i] = arr[i] += 1
+	}
+	return arr
+}
+
+function determineLever(arr) {
+	const leverString = arr.toString()
+	const stringObj = {
+		"e,f,l": "first class lever",
+		"e,l,f": "second class lever",
+		"f,e,l": "third class lever"
+	}
+	return stringObj[leverString]
+}
